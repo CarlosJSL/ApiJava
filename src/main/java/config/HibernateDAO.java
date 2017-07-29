@@ -10,11 +10,7 @@ import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
 
-
-
-
-
-public class HibernateDAO<T, Type extends Serializable> implements IGenericDAO<T, Type>  {
+public abstract class HibernateDAO<T, Type extends Serializable> implements IGenericDAO<T, Type> {
 	private Class<T> persistentClass;
 	private List<T> listAllEntities;
 
@@ -45,6 +41,18 @@ public class HibernateDAO<T, Type extends Serializable> implements IGenericDAO<T
 		} catch (Exception e) {
 			rollBackTransaction();
 			throw new IllegalArgumentException();
+		}
+	}
+
+	@Override
+	public void save(T entity) throws IllegalArgumentException {
+		try {
+			beginTransaction();
+			HibernateUtils.getSession().save(entity);
+			commitTransaction();
+		} catch (Exception e) {
+			rollBackTransaction();
+			throw new IllegalArgumentException("Register invalid!");
 		}
 	}
 

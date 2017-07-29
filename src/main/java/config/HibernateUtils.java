@@ -37,8 +37,6 @@ public class HibernateUtils {
 				configuration.setProperty("hibernate.connection.username", user);
 				configuration.setProperty("hibernate.connection.password", passw);
 
-				// Pessoal
-
 				return configuration.buildSessionFactory();
 			} else {
 				return sessionFactory;

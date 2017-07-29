@@ -1,0 +1,7 @@
+config/HibernateUtils.class
+config/HibernateDAO.class
+model/Book_.class
+model/Book.class
+dao/BookDAO.class
+config/IGenericDAO.class
+service/BookService.class
