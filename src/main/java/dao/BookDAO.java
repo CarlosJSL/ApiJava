@@ -9,7 +9,7 @@ public class BookDAO extends HibernateDAO<Book, Long> {
 		super(Book.class);
 	}
 
-	public void getBook() {
+	public void getBookById() {
 		
 	}
 

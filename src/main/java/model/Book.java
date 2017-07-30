@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Book {
 
 	@Id
-	@SequenceGenerator(name = "book_seq", sequenceName = "publilc.book_id_seq", allocationSize = 1)
+	@SequenceGenerator(name = "book_seq", sequenceName = "public.book_id_seq", allocationSize = 1)
 	@GeneratedValue(generator = "book_seq", strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String titulo;

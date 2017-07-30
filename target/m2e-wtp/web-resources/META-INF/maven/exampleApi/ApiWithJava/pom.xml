@@ -180,7 +180,7 @@
 				</property>
 			</activation>
 			<properties>
-				<database.url>jdbc:postgresql://localhost:5432/postgres</database.url>
+				<database.url>jdbc:postgresql://localhost:5432/book</database.url>
 				<database.username>postgres</database.username>
 				<database.password>postgres</database.password>
 			</properties>

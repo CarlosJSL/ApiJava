@@ -1,7 +1,9 @@
 config/HibernateUtils.class
 config/HibernateDAO.class
 model/Book_.class
+controller/BookController.class
 model/Book.class
 dao/BookDAO.class
 config/IGenericDAO.class
 service/BookService.class
+config/ApplicationJAXRS.class

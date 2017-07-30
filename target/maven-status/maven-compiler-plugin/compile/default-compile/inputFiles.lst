@@ -1,6 +1,8 @@
 /home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/dao/BookDAO.java
 /home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/config/HibernateDAO.java
 /home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/service/BookService.java
+/home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/controller/BookController.java
 /home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/config/HibernateUtils.java
+/home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/config/ApplicationJAXRS.java
 /home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/model/Book.java
 /home/carlos/workspace/apache-tomcat-7.0.73/webapps/ApiWithJava/src/main/java/config/IGenericDAO.java

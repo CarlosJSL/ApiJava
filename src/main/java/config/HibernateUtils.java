@@ -4,6 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import model.Book;
+
 public class HibernateUtils {
 	private static Configuration configuration;
 	private static final SessionFactory sessionFactory = buildSessionFactory();
@@ -15,7 +17,8 @@ public class HibernateUtils {
 		try {
 			if (sessionFactory == null) {
 				configuration = new Configuration();
-
+				setSettingsContext();
+				
 				configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 				configuration.setProperty("hibernate.connection.driver_class", "org.postgresql.Driver");
 				configuration.setProperty("hibernate.temp.use_jdbc_metadata_defaults", "false");
@@ -37,6 +40,7 @@ public class HibernateUtils {
 				configuration.setProperty("hibernate.connection.username", user);
 				configuration.setProperty("hibernate.connection.password", passw);
 
+				configuration.addAnnotatedClass(Book.class);
 				return configuration.buildSessionFactory();
 			} else {
 				return sessionFactory;
@@ -52,4 +56,10 @@ public class HibernateUtils {
 		return sessionFactory.getCurrentSession();
 	}
 
+	public synchronized static final void setSettingsContext() {
+		ReadPropertyFile property = new ReadPropertyFile();
+		url = property.getUrlDb();
+		passw = property.getPasswordDb();
+		user = property.getUsernameDb();
+	}
 }

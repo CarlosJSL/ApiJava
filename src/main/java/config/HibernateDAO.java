@@ -6,11 +6,16 @@ import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ParameterExpression;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
 
-public abstract class HibernateDAO<T, Type extends Serializable> implements IGenericDAO<T, Type> {
+
+
+
+
+public class HibernateDAO<T, Type extends Serializable> implements IGenericDAO<T, Type>  {
 	private Class<T> persistentClass;
 	private List<T> listAllEntities;
 
@@ -43,7 +48,9 @@ public abstract class HibernateDAO<T, Type extends Serializable> implements IGen
 			throw new IllegalArgumentException();
 		}
 	}
-
+	
+	
+	
 	@Override
 	public void save(T entity) throws IllegalArgumentException {
 		try {
